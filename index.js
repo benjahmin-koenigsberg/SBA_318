@@ -1,7 +1,9 @@
 const express = require('express')
 const path = require('path')
 const users = require('./data/users.js')
-const logger = require("./middlewear/logger.js")
+const fruits = require('./data/fruits.js')
+const quotes = require('./data/quotes.js')
+const logger = require("./middleware/logger.js")
 var exphbs = require('express-handlebars');
 //const moment = require('moment');
 
@@ -21,16 +23,42 @@ app.set('view engine', 'handlebars');
 //app.set('views', './views');
 
 //home bapge handlebars route
-app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Users App',
+app.get('/users', (req, res) => {
+    res.render('users', {
+        title: 'Users List',
         users
     })
 })
 
+//fruit bapge handlebars route
+app.get('/fruits', (req, res) => {
+    res.render('fruits', {
+        title: 'Fruits List',
+        fruits
+    })
+})
+
+
+//quotes bapge handlebars route
+app.get('/quotes', (req, res) => {
+    res.render('quotes', {
+        title: 'Quotes List',
+        quotes
+    })
+})
+
+
 //init middlewear
 
-//1 app.use(logger)
+//middleware 1
+app.use(logger)
+
+//middleware 2
+
+// app.use((req, res) => {
+//     res.status(404);
+//     res.json({ error: "Resource not found" });
+// });
 
 
 //2  app.use((req, res)=>{
@@ -45,7 +73,14 @@ app.use(express.urlencoded({ extended: false }))
 //users api routes
 app.use('/api/users', require('./routes/users'));
 
+//fruit route
 app.use('/api/fruits', require('./routes/fruits.js'))
+
+//qoute route
+app.use('/api/quotes', require("./routes/quotes.js"))
+
+
+
 
 //start server
 app.listen(port, () => {
