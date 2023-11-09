@@ -22,7 +22,15 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 //app.set('views', './views');
 
-//home bapge handlebars route
+app.get('/', (req, res) => {
+    res.render('home', {
+        title: 'Home',
+    })
+})
+
+
+
+//user bapge handlebars route
 app.get('/users', (req, res) => {
     res.render('users', {
         title: 'Users List',
