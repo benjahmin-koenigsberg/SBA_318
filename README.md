@@ -1,51 +1,102 @@
 # Project Title
 
-Simple overview of use/purpose.
+SBA 318: Express Server Application
+
+## Objectives
+Create a server application with Node and Express.
+Create a RESTful API using Express.
+Create Express middleware.
+Use Express middleware.
+Use a template engine to render views with Express.
+Interact with a self-made API through HTML forms.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This is basic Express.js server that serves up JSON data for a list of fake users, actual list of fruit and actual quotes. Includes unique endpoints and allows for dynamic GET requests with request url paramaters
+
+#### Home page
+
+http://localhost:5000/
+
+check out the homepage layout to visit either the user, fruits or quotes JSON data
+
+![Alt text](<screenshots/Screen Shot 2023-11-09 at 3.56.25 PM.png>)
+
+#### Users
+
+http://localhost:5000/users
+
+![Alt text](<screenshots/Screen Shot 2023-11-09 at 3.23.22 PM.png>)
+
+#### Users API
+
+http://localhost:5000/api/users
+
+(from json placeholer)
+
+![Alt text](<screenshots/Screen Shot 2023-11-09 at 3.25.03 PM.png>)
+
+enter a specific id to get just that user's info
+( http://localhost:5000/api/users/:id )
+
+#### Fruits
+
+http://localhost:5000/fruits
+
+![Alt text](<screenshots/Screen Shot 2023-11-09 at 3.24.18 PM.png>)
+
+enter a specific id  to get just that fruits's info
+( http://localhost:5000/api/fruit/68 )
+
+![Alt text](<screenshots/Screen Shot 2023-11-09 at 3.58.03 PM.png>)
+
+#### Quotes
+
+http://localhost:5000/quotes
+
+![Alt text](<screenshots/Screen Shot 2023-11-09 at 3.24.07 PM.png>)
+
+enter a keyword or author to get quotes that contain that name or word
+(http://localhost:5000/api/quotes/proverb)
+
+![Alt text](<screenshots/Screen Shot 2023-11-09 at 3.57.13 PM.png>)
+
 
 ## Getting Started
 
+- clone this repo
+https://github.com/benjahmin-koenigsberg/SBA_318.git
+
+
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Handlebars
+* Bootstrap
+* Nodemon
+* Moment
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+- instal node modules
 ```
-code blocks for commands
+npm i
 ```
-
-## Help
-
-Any advise for common problems or issues.
+- start local server
 ```
-command to run if program contains helper info
+npm run start
 ```
 
 ## Authors
 
-Contributors names and contact info
+Benjahmin Koenigsberg
 
-ex. Dominique Pizzie
-
-
+https://benjahminkoenigsberg.com
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+
+* [Per Scholas](https://perscholas.org)
+* [Brad Traversy's Express Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
+
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
