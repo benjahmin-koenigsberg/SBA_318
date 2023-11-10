@@ -5,6 +5,7 @@ const fruits = require('./data/fruits.js')
 const quotes = require('./data/quotes.js')
 const logger = require("./middleware/logger.js")
 var exphbs = require('express-handlebars');
+const exists = require('./middleware/exists.js')
 //const moment = require('moment');
 
 //port
@@ -63,9 +64,14 @@ app.use(logger)
 
 //middleware 2
 
-// app.use((req, res) => {
-//     res.status(404);
-//     res.json({ error: "Resource not found" });
+
+// app.use((req, res, next) => {
+//     if () {
+//         res.json({ error: "Resource not found" });
+//     }
+//     else {
+//         next()
+//     }
 // });
 
 
