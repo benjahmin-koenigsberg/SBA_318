@@ -1,11 +1,12 @@
 <style>
   body{
-background-image: url('https://img.freepik.com/premium-vector/sweet-pear-seamless-pattern-organic-healthy-fruits-background_721813-717.jpg');
+background-image: url('https://cdn.stockmediaserver.com/smsimg31/pv/IsignstockContributors/ISS_33984_02270.jpg?token=RBlgCQlCac5-M4C8cjbCAo2-el58ijeeAhYwOYMDthE&class=pv&smss=52&expires=4102358400');
+
   }
 </style>
 <h1 class="display-1 text-center mb-3">{{title}}</h1>
 <h4>Fruits</h4>
-<ul class="list-group">{{#each fruits}}
+<ul class="list-group overflow-y-scroll" style="height: 50vh;">{{#each fruits}}
     <li class="list-group-item"><span class="fw-bold">{{this.name}}</span><br><span>Family :</span> {{this.family}}</li>
   {{/each}}
 </ul>
