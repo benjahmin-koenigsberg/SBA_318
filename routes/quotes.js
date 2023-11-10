@@ -20,6 +20,9 @@ router.get('/:author', (req, res) => {
  else {
         res.json(quotes.filter(quote => quote.author.includes(req.params.author)))
  }
+    //res.json(quotes.filter(quote => quote.author.includes(req.params.author)))
+
+
 })
 
 

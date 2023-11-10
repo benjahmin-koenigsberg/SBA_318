@@ -95,6 +95,16 @@ app.use('/api/quotes', require("./routes/quotes.js"))
 
 
 
+//custom middleware : 404 not found
+app.use((req, res) => {
+    res.status(404);
+    //res.json({ error: "Resource not found" });
+    res.render('404')
+});
+
+
+
+
 
 //start server
 app.listen(port, () => {
